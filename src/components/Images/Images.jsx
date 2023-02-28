@@ -70,7 +70,7 @@ const Images = () => {
         </Modal>
       )}
 
-      <Searchbar Submit={onSubmit} />
+      <Searchbar submit={onSubmit} />
       {loading && <Spinner />}
 
       {error && <p>{error}</p>}

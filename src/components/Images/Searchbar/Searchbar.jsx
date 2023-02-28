@@ -2,7 +2,7 @@ import { useState } from 'react';
 import css from 'Shared/styles.module.css';
 import Notiflix from 'notiflix';
 import PropTypes from 'prop-types';
-const Searchbar = ({ Submit }) => {
+const Searchbar = ({ submit }) => {
   const [state, setState] = useState({
     search: '',
   });
@@ -13,7 +13,7 @@ const Searchbar = ({ Submit }) => {
       Notiflix.Notify.warning('Pls, type something');
       return;
     }
-    Submit({ ...state });
+    submit({ ...state });
 
     reset();
   };
@@ -50,5 +50,5 @@ const Searchbar = ({ Submit }) => {
 };
 export default Searchbar;
 Searchbar.propTypes = {
-  Submit: PropTypes.func.isRequired,
+  submit: PropTypes.func.isRequired,
 };
